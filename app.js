@@ -13,3 +13,12 @@ function agregarAmigo() {
         alert("Por favor, inserte un nombre."); // Mostrar mensaje de error
         return; // Detener la ejecución de la función si el campo está vacío
     }
+        // Actualizar el array de amigos
+        listaDeAmigos.push(nombre);
+
+        // Limpiar el campo de entrada
+        inputAmigo.value = "";
+    
+        // Llamar a la función para actualizar la lista en la interfaz
+        actualizarLista();
+    }        
