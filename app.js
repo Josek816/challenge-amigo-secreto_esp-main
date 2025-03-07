@@ -34,3 +34,18 @@ function actualizarLista() {
         listaAmigosUI.appendChild(li);
     });
 }
+// Función para actualizar la lista de amigos en la interfaz
+function actualizarLista() {
+    // Obtener el elemento de la lista en el HTML
+    let listaAmigosUI = document.getElementById("listaAmigos");
+
+    // Limpiar la lista existente para evitar duplicados
+    listaAmigosUI.innerHTML = "";
+
+    // Iterar sobre el array listaDeAmigos y agregar cada nombre a la lista
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        let li = document.createElement("li"); // Crear un nuevo elemento <li>
+        li.textContent = listaDeAmigos[i]; // Asignar el nombre del amigo
+        listaAmigosUI.appendChild(li); // Agregar el <li> a la lista en la interfaz
+    }
+}
