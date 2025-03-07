@@ -22,3 +22,15 @@ function agregarAmigo() {
         // Llamar a la función para actualizar la lista en la interfaz
         actualizarLista();
     }        
+    // Función para actualizar la lista de amigos en la interfaz
+function actualizarLista() {
+    let listaAmigosUI = document.getElementById("listaAmigos");
+    listaAmigosUI.innerHTML = ""; // Limpiar la lista antes de actualizar
+
+    // Recorrer el array y agregar cada nombre a la lista en la interfaz
+    listaDeAmigos.forEach((amigo) => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        listaAmigosUI.appendChild(li);
+    });
+}
